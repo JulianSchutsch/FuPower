@@ -1,0 +1,5 @@
+require("fucore.data")
+require("fubelts.data")
+require("fufusion.data")
+require("fuweapon.data")
+require("fuoil.data")
