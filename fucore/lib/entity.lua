@@ -62,14 +62,16 @@ function findEntry(table, typ, name)
   return nil
 end
 
-function gsubEntities(table, key, matchPattern, replacePattern)
-  if type(value)~="table" then
+function gsubEntities(table, key, matchPattern, replacePattern, ignoreKeys)
+  if type(table)~="table" then
     return
   end
   if table[key]~=nil then
     table[key] = table[key]:gsub(matchPattern, replacePattern)
   end
   for k, v in pairs(table) do
-    gsubEntitites(v)
+    if ignoreKeys==nil or ignoreKeys[k]==nil then
+      gsubEntities(v, key, matchPattern, replacePattern, ignoreKeys)
+    end
   end
 end

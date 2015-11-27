@@ -1,7 +1,7 @@
 require "fucore.lib.modules"
 
 if modPresent_Belts() then
-  data:extend(
+  item =
   {
     type = "item",
     name = "fusion-transport-belt-to-ground-extended",
@@ -11,6 +11,6 @@ if modPresent_Belts() then
     place_result = "fusion-transport-belt-to-ground-extended",
     order = "a",
     stack_size = 50
-  })
+  }
+  data:extend({item})
 end
-
