@@ -24,6 +24,15 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "fusion-boiler",
+    subgroup = "fusion-buildings",
+    enabled = "false",
+    energy_required = 5,
+    ingredients ={{"steel-plate", 1000}, {"processing-unit", 100}, {"iron-plate", 500}},
+    result = "fusion-boiler"
+  },
+  {
+    type = "recipe",
     name = "fusion-heat-fluid-production",
     category = "chemistry",
     subgroup = "fusion-resources",

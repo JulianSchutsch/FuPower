@@ -21,7 +21,7 @@ data:extend(
     subgroup = "fusion-buildings",
     enabled = "false",
     energy_required = 5,
-    ingredients ={{"steel-plate", 200}, {"processing-unit", 50}},
-    result = "fusion-steam-engine"
+    ingredients ={{"steel-plate", 200}, {"processing-unit", 50}, {"iron-gear-wheel", 200}},
+    result = "fusion-oil-plant"
   },
 })

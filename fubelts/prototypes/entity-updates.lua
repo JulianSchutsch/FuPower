@@ -1,10 +1,6 @@
 require "fucore.lib.modules"
 require "fucore.lib.entity"
 
-alienTunnel = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground"))
-alienSplitter = clone(findEntry(data, "splitter", "express-splitter"))
-alienBelt = clone(findEntry(data, "transport-belt", "express-transport-belt"))
-
 local function patchFilenames(belt)
   ignorePattern = {ending_patch=0, working_sound=0}
   gsubEntities(belt, "filename", "__base__", "__fupower__", ignorePattern)
@@ -14,30 +10,65 @@ local function patchFilenames(belt)
   gsubEntities(belt, "filename", "express%-tunnel", "fusion-tunnel", ignorePattern)
 end
 
-alienBelt.name      = "fusion-transport-belt"
-alienBelt.speed     = 2*alienBelt.speed
-patchFilenames(alienBelt)
-alienBelt.minable.result = alienBelt.name
-data:extend({alienBelt})
+local function patchSuperFilenames(belt)
+  ignorePattern = {ending_patch=0, working_sound=0}
+  gsubEntities(belt, "filename", "fusion%-", "fusion-super-", ignorePattern)
+end
 
-alienSplitter.name  = "fusion-splitter"
-alienSplitter.speed = 2*alienBelt["speed"]
-alienSplitter.minable.result = "fusion-splitter"
-patchFilenames(alienSplitter)
-data:extend({alienSplitter})
+fusionBelt = clone(findEntry(data, "transport-belt", "express-transport-belt"))
+fusionBelt.name      = "fusion-transport-belt"
+fusionBelt.speed     = 2*fusionBelt.speed
+patchFilenames(fusionBelt)
+fusionBelt.minable.result = fusionBelt.name
+data:extend({fusionBelt})
 
-alienTunnel.name    = "fusion-transport-belt-to-ground"
-alienTunnel.speed   = 2*alienTunnel.speed
-alienTunnel.minable.result = "fusion-transport-belt-to-ground"
-patchFilenames(alienTunnel)
-data:extend({alienTunnel})
+superFusionBelt = clone(fusionBelt)
+superFusionBelt.name = "fusion-super-transport-belt"
+superFusionBelt.speed = 2*superFusionBelt.speed
+patchSuperFilenames(superFusionBelt)
+superFusionBelt.minable.result = superFusionBelt.name
+data:extend({superFusionBelt})
+
+fusionSplitter = clone(findEntry(data, "splitter", "express-splitter"))
+fusionSplitter.name  = "fusion-splitter"
+fusionSplitter.speed = 2*fusionSplitter.speed
+patchFilenames(fusionSplitter)
+fusionSplitter.minable.result = fusionSplitter.name
+data:extend({fusionSplitter})
+
+superFusionSplitter = clone(fusionSplitter)
+superFusionSplitter.name = "fusion-super-splitter"
+superFusionSplitter.speed = 2*superFusionSplitter.speed
+patchSuperFilenames(superFusionSplitter)
+superFusionSplitter.minable.result = superFusionSplitter.name
+data:extend({superFusionSplitter})
+
+fusionTunnel = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground"))
+fusionTunnel.name    = "fusion-transport-belt-to-ground"
+fusionTunnel.speed   = 2*fusionTunnel.speed
+patchFilenames(fusionTunnel)
+fusionTunnel.minable.result = fusionTunnel.name
+data:extend({fusionTunnel})
+
+superFusionTunnel = clone(fusionTunnel)
+superFusionTunnel.name = "fusion-super-transport-belt-to-ground"
+superFusionTunnel.speed = 2*superFusionTunnel.speed
+patchSuperFilenames(superFusionTunnel)
+superFusionTunnel.minable.result = superFusionTunnel.name
+data:extend({superFusionTunnel})
 
 if modPresent_Belts() then
-  alienLongBelt = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground-extended"))
-  alienLongBelt.name  = "fusion-transport-belt-to-ground-extended"
-  alienLongBelt.speed = 2*alienLongBelt.speed
-  alienLongBelt.minable.result = alienLongBelt.name
-  patchFilenames(alienLongBelt)
-
-  data:extend({alienLongBelt})
+  fusionLongBelt = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground-extended"))
+  fusionLongBelt.name  = "fusion-transport-belt-to-ground-extended"
+  fusionLongBelt.speed = 2*fusionLongBelt.speed
+  patchFilenames(fusionLongBelt)
+  fusionLongBelt.minable.result = fusionLongBelt.name
+  data:extend({fusionLongBelt})
+  
+  superFusionLongBelt = clone(fusionLongBelt)
+  superFusionLongBelt.name = "fusion-super-transport-belt-to-ground-extended"
+  superFusionLongBelt.speed = 2*superFusionLongBelt.speed
+  patchSuperFilenames(superFusionLongBelt)
+  superFusionLongBelt.minable.result = superFusionLongBelt.name
+  data:extend({superFusionLongBelt})
 end

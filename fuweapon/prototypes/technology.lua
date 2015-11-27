@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "fusion-laser-turret",
-    icon = "__base__/graphics/technology/laser-turrets.png",
+    icon = "__fupower__/graphics/icons/fusion-laser-turret.png",
     prerequisites = {"laser-turret-speed-5", "laser-turret-damage-5"},
     effects =
     {
