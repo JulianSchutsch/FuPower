@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "fusion-buildings",
     place_result = "fusion-drill",
-    order = "c[solid-fuel]",
+    order = "j",
     stack_size = 2
   },
 })

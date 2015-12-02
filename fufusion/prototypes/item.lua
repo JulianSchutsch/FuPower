@@ -13,21 +13,21 @@ data:extend(
   {
     type = "item",
     name = "fusion-boiler",
-    icon = "__base__/graphics/icons/boiler.png",
+    icon = "__fupower__/graphics/icons/fusion-boiler.png",
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-boiler",
-    order = "a",
+    order = "e",
     stack_size = 10
   },
   {
     type = "item",
     name = "fusion-advanced-boiler",
-    icon = "__base__/graphics/icons/boiler.png",
+    icon = "__fupower__/graphics/icons/fusion-advanced-boiler.png",
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-advanced-boiler",
-    order = "a",
+    order = "b",
     stack_size = 10
   },
   {
@@ -37,7 +37,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-reactor",
-    order = "a",
+    order = "d",
     stack_size = 10
   },
   {
@@ -57,7 +57,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-steam-engine",
-    order = "a",
+    order = "f",
     stack_size = 10
   },
   {
@@ -67,7 +67,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-advanced-steam-engine",
-    order = "a",
+    order = "c",
     stack_size = 10
   },
 })

@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-oil-plant",
-    order = "a",
+    order = "g",
     stack_size = 10
   },
 })

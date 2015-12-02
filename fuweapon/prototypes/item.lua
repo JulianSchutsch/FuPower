@@ -7,7 +7,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-laser-turret",
-    order = "a",
+    order = "h",
     stack_size = 50
   },
   {
@@ -17,7 +17,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-area-control",
-    order = "a",
+    order = "i",
     stack_size = 50
   },
 })

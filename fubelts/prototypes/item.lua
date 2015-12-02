@@ -13,7 +13,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-transport-belt",
-    order = "a",
+    order = "f",
     stack_size = 50
   },
   {
@@ -23,7 +23,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-splitter",
-    order = "a",
+    order = "g",
     stack_size = 50
   },
   {
@@ -33,7 +33,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-transport-belt-to-ground",
-    order = "a",
+    order = "h",
     stack_size = 50
   },
   {
@@ -53,7 +53,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-super-splitter",
-    order = "a",
+    order = "b",
     stack_size = 50
   },
   {
@@ -63,7 +63,7 @@ data:extend(
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-super-transport-belt-to-ground",
-    order = "a",
+    order = "c",
     stack_size = 50
   },
 })

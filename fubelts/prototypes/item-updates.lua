@@ -9,7 +9,7 @@ if modPresent_Belts() then
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-transport-belt-to-ground-extended",
-    order = "a",
+    order = "h-i",
     stack_size = 50
   }
   data:extend({item})
@@ -21,7 +21,7 @@ if modPresent_Belts() then
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-super-transport-belt-to-ground-extended",
-    order = "a",
+    order = "d-e-f",
     stack_size = 50
   }
   data:extend({item})
