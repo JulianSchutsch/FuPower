@@ -39,7 +39,7 @@ data:extend(
   {
     type = "item",
     name = "fusion-super-transport-belt",
-    icon = "__fupower__/graphics/icons/fusion-transport-belt.png",
+    icon = "__fupower__/graphics/icons/fusion-super-transport-belt.png",
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fusion-super-transport-belt",

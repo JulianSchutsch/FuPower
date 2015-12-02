@@ -1,0 +1,1 @@
+require "fuconstruction.prototype.entity-updates"

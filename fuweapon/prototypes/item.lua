@@ -10,4 +10,14 @@ data:extend(
     order = "a",
     stack_size = 50
   },
+  {
+    type = "item",
+    name = "fusion-area-control",
+    icon = "__fupower__/graphics/icons/fusion-area-control.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "fusion-buildings",
+    place_result = "fusion-area-control",
+    order = "a",
+    stack_size = 50
+  },
 })

@@ -1,0 +1,1 @@
+require("fudrill.prototypes.entity-updates")

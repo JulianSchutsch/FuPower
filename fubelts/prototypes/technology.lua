@@ -22,7 +22,7 @@ data:extend(
     type = "technology",
     name = "fusion-super-transport-belt",
     icon = "__fupower__/graphics/icons/fusion-super-transport-belt.png",
-    prerequisites = {"logistics-3"},
+    prerequisites = {"fusion-transport-belt"},
     effects =
     {
       {type = "unlock-recipe", recipe = "fusion-super-transport-belt"},

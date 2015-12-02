@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "fusion",
-    icon = "__base__/graphics/technology/fusion-reactor-equipment.png",
+    icon = "__fupower__/graphics/icons/fusion-reactor.png",
     prerequisites = {"fusion-reactor-equipment"},
     effects =
     {
@@ -16,8 +16,28 @@ data:extend(
     },
     unit =
     {
-      count=600,
-      ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}},
+      count=1200,
+      ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}, {"alien-science-pack", 2}},
+      time = 30
+    },
+    order = "d-a-a"
+  },
+  {
+    type = "technology",
+    name = "fusion-advanced",
+    icon = "__fupower__/graphics/icons/fusion-advanced-reactor.png",
+    prerequisites = {"fusion"},
+    effects =
+    {
+       {type = "unlock-recipe", recipe = "fusion-advanced-reactor"},
+       {type = "unlock-recipe", recipe = "fusion-advanced-steam-engine", },
+       {type = "unlock-recipe", recipe = "fusion-advanced-boiler"},
+       {type = "unlock-recipe", recipe = "fusion-advanced-heat-fluid-production", }
+    },
+    unit =
+    {
+      count=12000,
+      ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}, {"alien-science-pack", 2}},
       time = 30
     },
     order = "d-a-a"

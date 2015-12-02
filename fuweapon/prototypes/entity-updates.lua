@@ -82,3 +82,50 @@ laser.max_health = 10000
 laser.minable.result = laser.name
 
 data:extend({laser})
+
+areaControl = clone(findEntry(data, "radar", "radar"))
+areaControl.name = "fusion-area-control"
+areaControl.energy_per_sector = "200MJ"
+areaControl.energy_usage = "500MW"
+gsubFilter(areaControl, ".png", "__base__", "__fupower__")
+gsubFilter(areaControl, ".png", "radar", "fusion-area-control")
+areaControl.minable.result = areaControl.name
+
+data:extend({areaControl})
+
+--cannonBox = clone(findEntry(data, "container", "steel-chest"))
+--cannonBox.name = "fusion-cannon-
+
+areaLaser = clone(findEntry(data, "projectile", "blue-laser"))
+areaLaser.name = "fusion-laser"
+areaLaser.light = {intensity = 1.0, size=50}
+areaLaser.action.action_delivery.target_effects =
+{
+  {type = "damage", damage={amount=10000, type="explosion"}},
+  {type = "create-entity", entity_name = "massive-explosion"},
+  {
+    type = "nested-result",
+    action =
+    {
+      type = "area",
+      perimeter = 10,
+      action_delivery =
+      {
+        type = "instant",
+        target_effects =
+        {
+          {
+            type = "damage",
+            damage = {amount = 1000, type = "explosion"}
+           },
+           {
+             type = "create-entity",
+             entity_name = "explosion"
+           }
+         }
+       }
+     },
+   }
+}
+
+data:extend({areaLaser})

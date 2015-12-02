@@ -75,3 +75,19 @@ function gsubEntities(table, key, matchPattern, replacePattern, ignoreKeys)
     end
   end
 end
+
+function gsubFilter(table, filter, matchPattern, replacePattern, ignoreKeys)
+  if type(table)~="table" then
+    return
+  end
+  for k, v in pairs(table) do
+    if ignoreKeys==nil or ignoreKeys[k]==nil then
+      if type(v)=="string" then
+        if string.find(v, filter)~=nil then
+          table[k] = table[k]:gsub(matchPattern, replacePattern)
+        end
+      end
+      gsubFilter(v, filter, matchPattern, replacePattern, ignoreKeys)
+    end
+  end
+end  

@@ -1,0 +1,1 @@
+require "futrain.prototypes.entity-updates"
