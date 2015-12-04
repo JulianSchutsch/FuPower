@@ -90,4 +90,27 @@ function gsubFilter(table, filter, matchPattern, replacePattern, ignoreKeys)
       gsubFilter(v, filter, matchPattern, replacePattern, ignoreKeys)
     end
   end
+end
+
+function anyMatch(v, filter)
+  for k,x in string.gmatch(v, filter) do
+    return true
+  end
+  return false
+end
+
+function gsubMatch(table, filter, matchPattern, replacePattern, ignoreKeys)
+  if type(table)~="table" then
+    return
+  end
+  for k, v in pairs(table) do
+    if ignoreKeys==nil or ignoreKeys[k]==nil then
+      if type(v)=="string" then
+        if anyMatch(v, filter) then
+          table[k] = table[k]:gsub(matchPattern, replacePattern)
+        end
+      end
+      gsubMatch(v, filter, matchPattern, replacePattern, ignoreKeys)
+    end
+  end
 end  

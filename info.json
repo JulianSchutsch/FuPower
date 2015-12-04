@@ -6,5 +6,5 @@
    "contact":"",
    "homepage":"",
    "description":"Adds fusion power",
-   "dependencies":["base", "? Belts+"]
+   "dependencies":["base", "? Belts+", "? Fast_Long_Inserter"]
 }

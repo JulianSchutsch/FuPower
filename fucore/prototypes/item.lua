@@ -9,6 +9,18 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "fusion-recycle",
+    group = "fusion-power",
+    order = "06"
+  },
+  {
+    type = "item-subgroup",
+    name = "fusion-inserters",
+    group = "fusion-power",
+    order = "05"
+  },
+  {
+    type = "item-subgroup",
     name = "fusion-robots",
     group = "fusion-power",
     order = "04"
@@ -30,5 +42,15 @@ data:extend(
     name = "fusion-train",
     group = "fusion-power",
     order = "01"
+  },
+  {
+    type = "item",
+    name = "fusion-scrapper",
+    icon = "__base__/graphics/icons/assembling-machine-3.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "fusion-buildings",
+    place_result = "fusion-scrapper",
+    order = "z",
+    stack_size = 50,
   },
 })
