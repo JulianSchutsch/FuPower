@@ -1,18 +1,5 @@
 require "fucore.lib.modules"
 
-if not modPresent_Fast_Long_Handed_Inserter() then
-  data:extend(
-  {
-    {
-      type = "recipe",
-      name = "fast-long-handed-inserter",
-      enabled = "false",
-      ingredients = {{"long-handed-inserter", 1}, {"iron-gear-wheel", 1}, {"electronic-circuit", 2}},
-      result = "fast-long-handed-inserter",
-    }
-  })
-end
-
 if modPresent_Advanced_Inserter() then
   data:extend(
   {

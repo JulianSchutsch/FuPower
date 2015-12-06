@@ -34,4 +34,21 @@ data:extend(
     },
     order = ""
   },
+  {
+    type = "technology",
+    name = "fast-long-handed-inserter",
+    icon = "__fupower__/graphics/icons/fast-long-handed-inserter.png",
+    prerequisites = {"logistics-2"},
+    effects =
+    {
+      {type = "unlock-recipe", recipe = "fast-long-handed-inserter"},
+    },
+    unit =
+    {
+      count=20,
+      ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1},},
+      time = 30
+    },
+    order = ""
+  },
 })

@@ -1,4 +1,5 @@
-data:extend({
+data:extend(
+{
   {
     type = "recipe-category",
     name = "recycle"

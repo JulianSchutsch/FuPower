@@ -1,5 +1,4 @@
 require "fucore.lib.entity"
-require "fucore.lib.modules"
 
 -- For the case that Fast_Long_Handed_Inserter is present, its recipe is overwritten
 normal = findEntry(data, "inserter", "basic-inserter")

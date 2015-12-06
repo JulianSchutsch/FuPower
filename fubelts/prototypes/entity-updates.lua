@@ -15,6 +15,11 @@ local function patchSuperFilenames(belt)
   gsubEntities(belt, "filename", "fusion%-", "fusion-super-", ignorePattern)
 end
 
+local function patchUltraFilenames(belt)
+  ignorePattern = {ending_patch=0, working_sound=0}
+  gsubEntities(belt, "filename", "fusion%-super%-", "fusion-ultra-", ignorePattern)
+end
+
 fusionBelt = clone(findEntry(data, "transport-belt", "express-transport-belt"))
 fusionBelt.name      = "fusion-transport-belt"
 fusionBelt.speed     = 2*fusionBelt.speed
@@ -28,6 +33,13 @@ superFusionBelt.speed = 2*superFusionBelt.speed
 patchSuperFilenames(superFusionBelt)
 superFusionBelt.minable.result = superFusionBelt.name
 data:extend({superFusionBelt})
+
+ultraFusionBelt = clone(superFusionBelt)
+ultraFusionBelt.name = "fusion-ultra-transport-belt"
+ultraFusionBelt.speed = 4*ultraFusionBelt.speed
+patchUltraFilenames(ultraFusionBelt)
+ultraFusionBelt.minable.result = ultraFusionBelt.name
+data:extend({ultraFusionBelt})
 
 fusionSplitter = clone(findEntry(data, "splitter", "express-splitter"))
 fusionSplitter.name  = "fusion-splitter"
@@ -43,6 +55,13 @@ patchSuperFilenames(superFusionSplitter)
 superFusionSplitter.minable.result = superFusionSplitter.name
 data:extend({superFusionSplitter})
 
+ultraFusionSplitter = clone(superFusionSplitter)
+ultraFusionSplitter.name = "fusion-ultra-splitter"
+ultraFusionSplitter.speed = 4*ultraFusionSplitter.speed
+patchUltraFilenames(ultraFusionSplitter)
+ultraFusionSplitter.minable.result = ultraFusionSplitter.name
+data:extend({ultraFusionSplitter})
+
 fusionTunnel = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground"))
 fusionTunnel.name    = "fusion-transport-belt-to-ground"
 fusionTunnel.speed   = 2*fusionTunnel.speed
@@ -56,6 +75,13 @@ superFusionTunnel.speed = 2*superFusionTunnel.speed
 patchSuperFilenames(superFusionTunnel)
 superFusionTunnel.minable.result = superFusionTunnel.name
 data:extend({superFusionTunnel})
+
+ultraFusionTunnel = clone(superFusionTunnel)
+ultraFusionTunnel.name = "fusion-ultra-transport-belt-to-ground"
+ultraFusionTunnel.speed = 4*ultraFusionTunnel.speed
+patchUltraFilenames(ultraFusionTunnel)
+ultraFusionTunnel.minable.result = ultraFusionTunnel.name
+data:extend({ultraFusionTunnel})
 
 if modPresent_Belts() then
   fusionLongBelt = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground-extended"))
@@ -71,4 +97,11 @@ if modPresent_Belts() then
   patchSuperFilenames(superFusionLongBelt)
   superFusionLongBelt.minable.result = superFusionLongBelt.name
   data:extend({superFusionLongBelt})
+  
+  ultraFusionLongBelt = clone(superFusionLongBelt)
+  ultraFusionLongBelt.name = "fusion-ultra-transport-belt-to-ground-extended"
+  ultraFusionLongBelt.speed = 4*ultraFusionLongBelt.speed
+  patchUltraFilenames(ultraFusionLongBelt)
+  ultraFusionLongBelt.minable.result = ultraFusionLongBelt.name
+  data:extend({ultraFusionLongBelt})
 end
