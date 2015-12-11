@@ -10,7 +10,7 @@ data:extend(
     {
       {"express-transport-belt", 20},
       {"alien-artifact", 5},
-      {"processing-unit", 5}
+      {"advanced-circuit", 5}
     },
     results =
     {
@@ -27,7 +27,7 @@ data:extend(
     {
       {"express-splitter", 20},
       {"alien-artifact", 5},
-      {"processing-unit", 10}
+      {"advanced-circuit", 10}
     },
     results =
     {
@@ -44,7 +44,7 @@ data:extend(
     {
       {"express-transport-belt-to-ground", 20},
       {"alien-artifact", 5},
-      {"processing-unit", 20}
+      {"advanced-circuit", 40}
     },
     results =
     {
@@ -77,7 +77,7 @@ data:extend(
     ingredients =
     {
       {"fusion-splitter", 20},
-      {"alien-artifact", 10},
+      {"alien-artifact", 20},
       {"processing-unit", 20}
     },
     results =
@@ -94,7 +94,7 @@ data:extend(
     ingredients =
     {
       {"fusion-transport-belt-to-ground", 20},
-      {"alien-artifact", 10},
+      {"alien-artifact", 40},
       {"processing-unit", 40}
     },
     results =

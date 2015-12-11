@@ -93,9 +93,6 @@ areaControl.minable.result = areaControl.name
 
 data:extend({areaControl})
 
---cannonBox = clone(findEntry(data, "container", "steel-chest"))
---cannonBox.name = "fusion-cannon-
-
 areaLaser = clone(findEntry(data, "projectile", "blue-laser"))
 areaLaser.name = "fusion-laser"
 areaLaser.light = {intensity = 1.0, size=50}

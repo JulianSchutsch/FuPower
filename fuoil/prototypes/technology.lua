@@ -3,7 +3,7 @@ data:extend(
   {
     type = "technology",
     name = "fusion-oil-production",
-    icon = "__base__/graphics/technology/oil-processing.png",
+    icon = "__fupower__/graphics/icons/fusion-oil-plant.png",
     prerequisites = {"fusion"},
     effects =
     {
