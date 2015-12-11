@@ -11,7 +11,7 @@ data:extend(
     type = "recipe",
     name = "fusion-inserter",
     enabled = "false",
-    ingredients = {{"fast-inserter", 4}, {"speed-module-1", 1}, {"processing-unit", 10}},
+    ingredients = {{"fast-inserter", 4}, {"speed-module", 1}, {"processing-unit", 10}},
     result = "fusion-inserter",
     order = "z"
   },
