@@ -23,15 +23,4 @@ if modPresent_Belts() then
     results = {{"fusion-super-transport-belt-to-ground-extended", 10}}
   }
   data:extend({recipe})
-  recipe =
-  {
-    type = "recipe",
-    name = "fusion-ultra-transport-belt-to-ground-extended",
-    subgroup = "fusion-belts",
-    enabled = "false",
-    energy_required = 1,
-    ingredients = {{"fusion-super-transport-belt-to-ground-extended", 20}, {"alien-artifact", 5}, {"processing-unit", 60}},
-    results = {{"fusion-ultra-transport-belt-to-ground-extended", 10}}
-  }
-  data:extend({recipe})
 end

@@ -36,22 +36,4 @@ data:extend(
       time = 30
     }
   },
-  {
-    type = "technology",
-    name = "fusion-ultra-transport-belt",
-    icon = "__fupower__/graphics/icons/fusion-super-transport-belt.png",
-    prerequisites = {"fusion-super-transport-belt"},
-    effects =
-    {
-      {type = "unlock-recipe", recipe = "fusion-ultra-transport-belt"},
-      {type = "unlock-recipe", recipe = "fusion-ultra-splitter"},
-      {type = "unlock-recipe", recipe = "fusion-ultra-transport-belt-to-ground"}
-    },
-    unit =
-    {
-      count=2000,
-      ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}, {"alien-science-pack", 2}},
-      time = 30
-    }
-  },
 })

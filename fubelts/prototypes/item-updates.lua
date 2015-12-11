@@ -25,16 +25,4 @@ if modPresent_Belts() then
     stack_size = 50
   }
   data:extend({item})
-  item =
-  {
-    type = "item",
-    name = "fusion-ultra-transport-belt-to-ground-extended",
-    icon = "__fupower__/graphics/icons/fusion-ultra-transport-belt-to-ground-extended.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "fusion-buildings",
-    place_result = "fusion-ultra-transport-belt-to-ground-extended",
-    order = "d",
-    stack_size = 50
-  }
-  data:extend({item})
 end

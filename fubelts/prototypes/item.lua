@@ -66,34 +66,4 @@ data:extend(
     order = "g",
     stack_size = 50
   },
-  {
-    type = "item",
-    name = "fusion-ultra-transport-belt",
-    icon = "__fupower__/graphics/icons/fusion-ultra-transport-belt.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "fusion-buildings",
-    place_result = "fusion-ultra-transport-belt",
-    order = "a",
-    stack_size = 50
-  },
-  {
-    type = "item",
-    name = "fusion-ultra-splitter",
-    icon = "__fupower__/graphics/icons/fusion-ultra-splitter.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "fusion-buildings",
-    place_result = "fusion-ultra-splitter",
-    order = "b",
-    stack_size = 50
-  },
-  {
-    type = "item",
-    name = "fusion-ultra-transport-belt-to-ground",
-    icon = "__fupower__/graphics/icons/fusion-ultra-transport-belt-to-ground.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "fusion-buildings",
-    place_result = "fusion-ultra-transport-belt-to-ground",
-    order = "c",
-    stack_size = 50
-  },
 })

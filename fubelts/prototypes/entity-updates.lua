@@ -34,13 +34,6 @@ patchSuperFilenames(superFusionBelt)
 superFusionBelt.minable.result = superFusionBelt.name
 data:extend({superFusionBelt})
 
-ultraFusionBelt = clone(superFusionBelt)
-ultraFusionBelt.name = "fusion-ultra-transport-belt"
-ultraFusionBelt.speed = 4*ultraFusionBelt.speed
-patchUltraFilenames(ultraFusionBelt)
-ultraFusionBelt.minable.result = ultraFusionBelt.name
-data:extend({ultraFusionBelt})
-
 fusionSplitter = clone(findEntry(data, "splitter", "express-splitter"))
 fusionSplitter.name  = "fusion-splitter"
 fusionSplitter.speed = 2*fusionSplitter.speed
@@ -54,13 +47,6 @@ superFusionSplitter.speed = 2*superFusionSplitter.speed
 patchSuperFilenames(superFusionSplitter)
 superFusionSplitter.minable.result = superFusionSplitter.name
 data:extend({superFusionSplitter})
-
-ultraFusionSplitter = clone(superFusionSplitter)
-ultraFusionSplitter.name = "fusion-ultra-splitter"
-ultraFusionSplitter.speed = 4*ultraFusionSplitter.speed
-patchUltraFilenames(ultraFusionSplitter)
-ultraFusionSplitter.minable.result = ultraFusionSplitter.name
-data:extend({ultraFusionSplitter})
 
 fusionTunnel = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground"))
 fusionTunnel.name    = "fusion-transport-belt-to-ground"
@@ -76,13 +62,6 @@ patchSuperFilenames(superFusionTunnel)
 superFusionTunnel.minable.result = superFusionTunnel.name
 data:extend({superFusionTunnel})
 
-ultraFusionTunnel = clone(superFusionTunnel)
-ultraFusionTunnel.name = "fusion-ultra-transport-belt-to-ground"
-ultraFusionTunnel.speed = 4*ultraFusionTunnel.speed
-patchUltraFilenames(ultraFusionTunnel)
-ultraFusionTunnel.minable.result = ultraFusionTunnel.name
-data:extend({ultraFusionTunnel})
-
 if modPresent_Belts() then
   fusionLongBelt = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground-extended"))
   fusionLongBelt.name  = "fusion-transport-belt-to-ground-extended"
@@ -97,11 +76,4 @@ if modPresent_Belts() then
   patchSuperFilenames(superFusionLongBelt)
   superFusionLongBelt.minable.result = superFusionLongBelt.name
   data:extend({superFusionLongBelt})
-  
-  ultraFusionLongBelt = clone(superFusionLongBelt)
-  ultraFusionLongBelt.name = "fusion-ultra-transport-belt-to-ground-extended"
-  ultraFusionLongBelt.speed = 4*ultraFusionLongBelt.speed
-  patchUltraFilenames(ultraFusionLongBelt)
-  ultraFusionLongBelt.minable.result = ultraFusionLongBelt.name
-  data:extend({ultraFusionLongBelt})
 end
