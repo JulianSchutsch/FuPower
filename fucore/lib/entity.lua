@@ -92,23 +92,28 @@ function gsubFilter(table, filter, matchPattern, replacePattern, ignoreKeys)
   end
 end
 
-function anyMatch(v, filter)
-  for k,x in string.gmatch(v, filter) do
-    return true
-  end
-  return false
-end
-
+-- Recursive replace function
+--   table : Table to operate on
+--   filter : The value of an entry must match the filter to apply pattern replacement
+--   matchPattern: Select pattern, what piece of a table's value should be replaced
+--   replacePattern: Text which should replace the previously selected part of a table's value
+--   ignoreKeys: Set of table keys to ignore, neither match by filter, nor recurse into them
+-- See Lua's gsub documentation for details
 function gsubMatch(table, filter, matchPattern, replacePattern, ignoreKeys)
+  -- Simplfied version of gmatch
+  local function anyMatch(v, filter)
+    for k,x in string.gmatch(v, filter) do
+      return true
+    end
+    return false
+  end
   if type(table)~="table" then
     return
   end
   for k, v in pairs(table) do
     if ignoreKeys==nil or ignoreKeys[k]==nil then
-      if type(v)=="string" then
-        if anyMatch(v, filter) then
-          table[k] = table[k]:gsub(matchPattern, replacePattern)
-        end
+      if type(v)=="string" and anyMatch(v, filter) then
+        table[k] = table[k]:gsub(matchPattern, replacePattern)
       end
       gsubMatch(v, filter, matchPattern, replacePattern, ignoreKeys)
     end

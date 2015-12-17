@@ -37,4 +37,10 @@ data:extend(
     group = "fusion-power",
     order = "01"
   },
+  {
+    type = "item-subgroup",
+    name = "fusion-belts",
+    group = "fusion-power",
+    order = "O2"
+  },
 })

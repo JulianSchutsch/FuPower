@@ -1,27 +1,35 @@
-data:extend(
-{
+require "config"
+
+local function createCoalOilPlantRecipe()
+  data:extend(
   {
-    type = "recipe-category",
-    name = "fusion-oil",
-  },
-  {
-    type = "recipe",
-    category = "chemistry",
-    name = "fusion-oil-production",
-    category = "fusion-oil",
-    subgroup = "fusion-resources",
-    enabled = "false",
-    energy_required = 1,
-    ingredients = {{type="fluid", name="water", amount=1}, {"coal", 1}},
-    results = {{type="fluid", name="crude-oil", amount=10}},
-  },
-  {
-    type = "recipe",
-    name = "fusion-oil-plant",
-    subgroup = "fusion-buildings",
-    enabled = "false",
-    energy_required = 5,
-    ingredients ={{"steel-plate", 200}, {"processing-unit", 50}, {"iron-gear-wheel", 200}},
-    result = "fusion-oil-plant"
-  },
-})
+    {
+      type = "recipe-category",
+      name = "fusion-oil",
+    },
+    {
+      type = "recipe",
+      category = "chemistry",
+      name = "fusion-oil-production",
+      category = "fusion-oil",
+      subgroup = "fusion-resources",
+      enabled = "false",
+      energy_required = 1,
+      ingredients = {{type="fluid", name="water", amount=1}, {"coal", 1}},
+      results = {{type="fluid", name="crude-oil", amount=10}},
+    },
+    {
+      type = "recipe",
+      name = "fusion-oil-plant",
+      subgroup = "fusion-buildings",
+      enabled = "false",
+      energy_required = 5,
+      ingredients ={{"steel-plate", 200}, {"processing-unit", 50}, {"iron-gear-wheel", 200}},
+      result = "fusion-oil-plant"
+    },
+  })
+end
+
+if config.fuoil.coalOilPlant==true then
+  createCoalOilPlantRecipe()
+end
