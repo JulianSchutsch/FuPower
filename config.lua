@@ -1,9 +1,9 @@
 -- Configuration file for the Fusion-Power mod
 
--- Enable pieces of the mod by  true  , disable pieces by  false  
--- Please not, the case matters, therefore True is not true.
+-- Enable features of the mod by  true  , disable pieces by  false  
+-- Please note that the case matters, therefore True is not true.
 
--- Dependencies are noted, if a dependency is not fulfilled, the piece is not loaded.
+-- Dependencies are noted, if a dependency is not fulfilled, the feature is skipped.
 
 config =
 {
