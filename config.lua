@@ -26,6 +26,7 @@ config =
 
   fufusion=
   {
+    deepWater = true,
     fusion = true,
     advancedFusion = true, -- Depends on fusion
   },

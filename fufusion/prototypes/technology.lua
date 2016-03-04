@@ -28,6 +28,29 @@ local function createFusionTechnology()
   })
 end
 
+local function createDeepWaterTechnology()
+  data:extend(
+  {
+    {
+      type = "technology",
+      name = "fusion-deep-water",
+      icon = "__base__/graphics/icons/fluid/water.png",
+      prerequisites = {"alien-technology"},
+      effects =
+      {
+        {type = "unlock-recipe", recipe = "fusion-deep-water"},
+      },
+      unit =
+      {
+        count=100,
+        ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}, {"alien-science-pack", 2}},
+        time = 30
+      },
+      order = "d-a-a"
+    },
+  })
+end
+
 local function createAdvancedFusionTechnology()
   data:extend(
   {
@@ -52,6 +75,10 @@ local function createAdvancedFusionTechnology()
       order = "d-a-a"
     },
   })
+end
+
+if config.fufusion.deepWater==true then
+  createDeepWaterTechnology()
 end
 
 if config.fufusion.fusion==true then

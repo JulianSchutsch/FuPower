@@ -20,6 +20,17 @@ local function createFusionRecipe()
     },
     {
       type = "recipe",
+      name = "fusion-water",
+      category = "chemistry",
+      subgroup = "fusion-resources",
+      enabled = false,
+      energy_required = 0.1,
+      ingredients = {},
+      results = {{type="fluid", name="water", amount=300}},
+      icon="__fupower__/graphics/icons/fusion-heat-fluid.png",
+    },
+    {
+      type = "recipe",
       name = "fusion-deuterium-extraction",
       category = "chemistry",
       subgroup = "fusion-resources",
@@ -112,6 +123,27 @@ local function createAdvancedFusionRecipe()
       result = "fusion-advanced-reactor"
     },
   })
+end
+
+local function createDeepWaterRecipe()
+  data:extend(
+  {
+    {
+      type = "recipe",
+      name = "fusion-deep-water",
+      category = "chemistry",
+      subgroup = "fusion-resources",
+      enabled = false,
+      energy_required = 0.1,
+      ingredients = {},
+      results = {{type="fluid", name="water", amount=300}},
+      icon="__base__/graphics/icons/fluid/water.png",
+    },
+  });
+end
+
+if config.fufusion.deepWater==true then
+  createDeepWaterRecipe()
 end
 
 if config.fufusion.fusion==true then
