@@ -9,6 +9,7 @@ config =
 {
   fubelts =
   {
+    extendedBelts = true,
     alienBelt = true,
     alienSuperBelt = true,
   },

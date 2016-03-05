@@ -2,7 +2,7 @@ require "config"
 require "fucore.lib.modules"
 
 local function createFusionBeltRecipeUpdate()
-  if modPresent_Belts() then
+  if config.fubelts.extendedBelts then
     local recipe =
     {
       type = "recipe",
@@ -18,7 +18,7 @@ local function createFusionBeltRecipeUpdate()
 end
 
 local function createFusionSuperBeltRecipeUpdate()
-  if modPresent_Belts() then
+  if config.fubelts.extendedBelts then
     local recipe =
     {
       type = "recipe",
@@ -31,6 +31,46 @@ local function createFusionSuperBeltRecipeUpdate()
     }
     data:extend({recipe})
   end
+end
+
+local function createExtendedBeltRecipes()
+  local recipe =
+  {
+    type = "recipe",
+    name = "basic-transport-belt-to-ground-extended",
+    subgroup = "fusion-belts",
+    enabled = "false",
+    energy_required = 1,
+    ingredients = {{"basic-transport-belt-to-ground", 6}},
+    results = {{"basic-transport-belt-to-ground-extended", 2}}
+  }
+  data:extend({recipe})
+  local recipe =
+  {
+    type = "recipe",
+    name = "fast-transport-belt-to-ground-extended",
+    subgroup = "fusion-belts",
+    enabled = "false",
+    energy_required = 1,
+    ingredients = {{"fast-transport-belt-to-ground", 6}},
+    results = {{"fast-transport-belt-to-ground-extended", 2}}
+  }
+  data:extend({recipe})
+  local recipe =
+  {
+    type = "recipe",
+    name = "express-transport-belt-to-ground-extended",
+    subgroup = "fusion-belts",
+    enabled = "false",
+    energy_required = 1,
+    ingredients = {{"express-transport-belt-to-ground", 6}},
+    results = {{"express-transport-belt-to-ground-extended", 2}}
+  }
+  data:extend({recipe})
+end
+
+if config.fubelts.extendedBelts==true then
+  createExtendedBeltRecipes()
 end
 
 if config.fubelts.alienBelt==true then

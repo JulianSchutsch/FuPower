@@ -2,7 +2,7 @@ require "config"
 require "fucore.lib.modules"
 
 local function createFusionBeltItemUpdate()
-  if modPresent_Belts() then
+  if config.fubelts.extendedBelts==true then
     local item =
     {
       type = "item",
@@ -19,7 +19,7 @@ local function createFusionBeltItemUpdate()
 end
 
 local function createFusionSuperBeltItemUpdate()
-  if modPresent_Belts() then
+  if config.fubelts.extendedBelts==true then
     local item =
     {
       type = "item",
@@ -33,6 +33,51 @@ local function createFusionSuperBeltItemUpdate()
     }
     data:extend({item})
   end
+end
+
+local function createExtendedBeltItemUpdate()
+  local item =
+  {
+    type = "item",
+    name = "basic-transport-belt-to-ground-extended",
+    icon = "__fupower__/graphics/icons/basic-transport-belt-to-ground-extended.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "fusion-buildings",
+    place_result = "basic-transport-belt-to-ground-extended",
+    order = "m",
+    stack_size = 50
+  }
+  data:extend({item})
+  local item =
+  {
+    type = "item",
+    name = "fast-transport-belt-to-ground-extended",
+    icon = "__fupower__/graphics/icons/fast-transport-belt-to-ground-extended.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "fusion-buildings",
+    place_result = "fast-transport-belt-to-ground-extended",
+    order = "n",
+    stack_size = 50
+  }
+  data:extend({item})
+  local item =
+  {
+    type = "item",
+    name = "express-transport-belt-to-ground-extended",
+    icon = "__fupower__/graphics/icons/express-transport-belt-to-ground-extended.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "fusion-buildings",
+    place_result = "express-transport-belt-to-ground-extended",
+    order = "o",
+    stack_size = 50
+  }
+  data:extend({item})
+end
+
+print("Item Updates")
+if config.fubelts.extendedBelts==true then
+  print("Create Extended Belts items")
+  createExtendedBeltItemUpdate()
 end
 
 if config.fubelts.alienBelt==true then

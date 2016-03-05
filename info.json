@@ -1,10 +1,10 @@
 {
    "name":"fupower",
-   "version":"0.0.12",
+   "version":"0.0.13",
    "title":"Fusion Power",
    "author":"Julian Schutsch",
    "contact":"",
    "homepage":"",
    "description":"Adds fusion power",
-   "dependencies":["base", "? Belts"]
+   "dependencies":["base"]
 }
