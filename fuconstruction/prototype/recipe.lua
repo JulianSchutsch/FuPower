@@ -26,6 +26,26 @@ local function createAlienConstructionRobotRecipe()
   })
 end
 
+local function createAlienLogisticRobotRecipe()
+  data:extend(
+  {
+    {
+      type = "recipe",
+      name = "fusion-logistic-robot",
+      subgroup = "fusion-robots",
+      enabled = false,
+      energy_required = 5,
+      icon="__fupower__/graphics/icons/fusion-logistic-robot.png",
+      ingredients ={{"logistic-robot", 10}, {"steel-plate", 10}, {"processing-unit", 1}},
+      result = "fusion-logistic-robot"
+    },
+  })
+end
+
 if config.fuconstruction.alienConstructionRobot==true then
   createAlienConstructionRobotRecipe()
+end
+
+if config.fuconstruction.alienLogisticRobot==true then
+  createAlienLogisticRobotRecipe()
 end

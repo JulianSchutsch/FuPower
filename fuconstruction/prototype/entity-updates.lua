@@ -17,6 +17,26 @@ local function createAlienConstructor()
   data:extend({alienConstructor})
 end
 
+local function createAlienLogisticRobot()
+  ignoreFilter = {smoke=0, sparks=0}
+  
+  local alienRobot = clone(findEntry(data, "logistic-robot", "logistic-robot"))
+  alienRobot.name = "fusion-logistic-robot"
+  alienRobot.speed = 0.6
+  alienRobot.max_health = 1500
+  alienRobot.max_energy = "6MW"
+  alienRobot.max_payload_size = 16
+  alienRobot.energy_per_move = "0.1KJ"
+  gsubFilter(alienRobot, ".png", "__base__", "__fupower__", ignoreFilter)
+  gsubFilter(alienRobot, ".png", "logistic%-robot", "fusion-logistic-robot", ignoreFilter)
+  alienRobot.minable.result = "fusion-logistic-robot"
+  data:extend({alienRobot})
+end
+
 if config.fuconstruction.alienConstructionRobot==true then
   createAlienConstructor()
+end
+
+if config.fuconstruction.alienLogisticRobot==true then
+  createAlienLogisticRobot()
 end

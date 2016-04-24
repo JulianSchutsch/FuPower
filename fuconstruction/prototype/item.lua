@@ -27,6 +27,26 @@ local function createAlienConstructionRobotItem()
   })
 end
 
+local function createAlienLogisticRobotItem()
+  data:extend(
+  {
+    {
+      type = "item",
+      name = "fusion-logistic-robot",
+      icon = "__fupower__/graphics/icons/fusion-logistic-robot.png",
+      flags = {"goes-to-quickbar"},
+      subgroup = "fusion-robots",
+      place_result = "fusion-logistic-robot",
+      order = "a",
+      stack_size = 10
+    },
+  })
+end
+
 if config.fuconstruction.alienConstructionRobot==true then
   createAlienConstructionRobotItem()
+end
+
+if config.fuconstruction.alienLogisticRobot==true then
+  createAlienLogisticRobotItem()
 end

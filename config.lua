@@ -17,6 +17,7 @@ config =
   fuconstruction =
   {
     alienConstructionRobot = true,
+    alienLogisticRobot = true,
   },
 
   fudrill=
