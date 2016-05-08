@@ -11,7 +11,7 @@ local function createAlienConstructionRobotItem()
       subgroup = "fusion-robots",
       place_result = "fusion-construction-robot",
       order = "a",
-      stack_size = 10
+      stack_size = 50
     },
     {
       type = "repair-tool",
@@ -38,7 +38,7 @@ local function createAlienLogisticRobotItem()
       subgroup = "fusion-robots",
       place_result = "fusion-logistic-robot",
       order = "a",
-      stack_size = 10
+      stack_size = 50
     },
   })
 end
