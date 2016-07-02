@@ -35,22 +35,22 @@ end
 local function fireTank(tank)
   local position = tank.position
   local surface = game.get_surface(1)
-  local dist = 60
+  local dist = 600
   local spawner = surface.find_nearest_enemy{position=position, max_distance=dist}
   if spawner then
-    surface.create_entity({name="fusion-laser", target=spawner, force=tank.force, position = position, speed=1.0})
+    surface.create_entity({name="fusion-laser", target=spawner, force=tank.force, position = position, speed=3.0})
   end
 end
 
 -- Check if mobile security zones are active, if, fire on enemies
 local function tankTick(event)
-  if event.tick%3==0 then
+--  if event.tick%3==0 then
     if global.fusion_tanks~=nil then
       for k,v in pairs(global.fusion_tanks) do
         fireTank(v)
       end
     end
-  end
+--  end
 end
 
 if config.fuweapon.securityZone==true then
