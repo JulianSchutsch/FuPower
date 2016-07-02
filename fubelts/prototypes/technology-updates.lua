@@ -7,7 +7,7 @@ local function createFusionBeltTechnologyUpdate()
     {
       type = "technology",
       name = "fusion-underground-belt-extended",
-      icon = "__fupower__/graphics/icons/fusion-transport-belt-to-ground-extended.png",
+      icon = "__fupower__/graphics/icons/fusion-underground-belt-extended.png",
       prerequisites = {"express-underground-belt-extended"},
       effects = {{type = "unlock-recipe", recipe = "fusion-underground-belt-extended"}},
       unit = { count=500, ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}, {"alien-science-pack", 2}}, time = 30 }
@@ -22,7 +22,7 @@ local function createFusionSuperBeltTechnologyUpdate()
     {
       type = "technology",
       name = "fusion-super-underground-belt-extended",
-      icon = "__fupower__/graphics/icons/fusion-super-transport-belt-to-ground-extended.png",
+      icon = "__fupower__/graphics/icons/fusion-super-underground-belt-extended.png",
       prerequisites = {"fusion-underground-belt-extended"},
       effects = {{type = "unlock-recipe", recipe = "fusion-super-underground-belt-extended"}},
       unit = { count=1000, ingredients = {{"science-pack-1", 2}, {"science-pack-2", 2}, {"science-pack-3", 2}, {"alien-science-pack", 2}}, time = 30 }
@@ -36,7 +36,7 @@ local function createExtendedBeltsTechnology()
   {
     type = "technology",
     name = "underground-belt-extended",
-    icon = "__fupower__/graphics/icons/basic-transport-belt-to-ground-extended.png",
+    icon = "__fupower__/graphics/icons/underground-belt-extended.png",
     prerequisites = {"logistics"},
     effects = {{type = "unlock-recipe", recipe = "underground-belt-extended"}},
     unit = { count=30, ingredients = {{"science-pack-1", 1}}, time=15}
@@ -56,7 +56,7 @@ local function createExtendedBeltsTechnology()
   {
     type = "technology",
     name = "express-underground-belt-extended",
-    icon = "__fupower__/graphics/icons/express-transport-belt-to-ground-extended.png",
+    icon = "__fupower__/graphics/icons/express-underground-belt-extended.png",
     prerequisites = {"logistics-3"},
     effects = {{type = "unlock-recipe", recipe = "express-underground-belt-extended"}},
     unit = { count=30, ingredients = {{"science-pack-3", 1}}, time=20}

@@ -7,7 +7,7 @@ local function createFusionBeltItemUpdate()
     {
       type = "item",
       name = "fusion-underground-belt-extended",
-      icon = "__fupower__/graphics/icons/fusion-transport-belt-to-ground-extended.png",
+      icon = "__fupower__/graphics/icons/fusion-underground-belt-extended.png",
       flags = {"goes-to-quickbar"},
       subgroup = "fusion-buildings",
       place_result = "fusion-underground-belt-extended",
@@ -24,7 +24,7 @@ local function createFusionSuperBeltItemUpdate()
     {
       type = "item",
       name = "fusion-super-underground-belt-extended",
-      icon = "__fupower__/graphics/icons/fusion-super-transport-belt-to-ground-extended.png",
+      icon = "__fupower__/graphics/icons/fusion-super-underground-belt-extended.png",
       flags = {"goes-to-quickbar"},
       subgroup = "fusion-buildings",
       place_result = "fusion-super-underground-belt-extended",
@@ -40,7 +40,7 @@ local function createExtendedBeltItemUpdate()
   {
     type = "item",
     name = "underground-belt-extended",
-    icon = "__fupower__/graphics/icons/basic-transport-belt-to-ground-extended.png",
+    icon = "__fupower__/graphics/icons/underground-belt-extended.png",
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "underground-belt-extended",
@@ -52,7 +52,7 @@ local function createExtendedBeltItemUpdate()
   {
     type = "item",
     name = "fast-underground-belt-extended",
-    icon = "__fupower__/graphics/icons/fast-transport-belt-to-ground-extended.png",
+    icon = "__fupower__/graphics/icons/fast-underground-belt-extended.png",
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "fast-underground-belt-extended",
@@ -64,7 +64,7 @@ local function createExtendedBeltItemUpdate()
   {
     type = "item",
     name = "express-underground-belt-extended",
-    icon = "__fupower__/graphics/icons/express-transport-belt-to-ground-extended.png",
+    icon = "__fupower__/graphics/icons/express-underground-belt-extended.png",
     flags = {"goes-to-quickbar"},
     subgroup = "fusion-buildings",
     place_result = "express-underground-belt-extended",

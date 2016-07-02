@@ -26,7 +26,7 @@ local function createFusionBeltItem()
     {
       type = "item",
       name = "fusion-underground-belt",
-      icon = "__fupower__/graphics/icons/fusion-transport-belt-to-ground.png",
+      icon = "__fupower__/graphics/icons/fusion-underground-belt.png",
       flags = {"goes-to-quickbar"},
       subgroup = "fusion-buildings",
       place_result = "fusion-underground-belt",
@@ -62,7 +62,7 @@ local function createFusionSuperBeltItem()
     {
       type = "item",
       name = "fusion-super-underground-belt",
-      icon = "__fupower__/graphics/icons/fusion-super-transport-belt-to-ground.png",
+      icon = "__fupower__/graphics/icons/fusion-super-underground-belt.png",
       flags = {"goes-to-quickbar"},
       subgroup = "fusion-buildings",
       place_result = "fusion-super-underground-belt",
