@@ -12,7 +12,7 @@ local function createFusionBeltTechnology()
       {
         {type = "unlock-recipe", recipe = "fusion-transport-belt"},
         {type = "unlock-recipe", recipe = "fusion-splitter"},
-        {type = "unlock-recipe", recipe = "fusion-transport-belt-to-ground"}
+        {type = "unlock-recipe", recipe = "fusion-underground-belt"}
       },
       unit =
       {
@@ -36,7 +36,7 @@ local function createFusionSuperBeltTechnology()
       {
         {type = "unlock-recipe", recipe = "fusion-super-transport-belt"},
         {type = "unlock-recipe", recipe = "fusion-super-splitter"},
-        {type = "unlock-recipe", recipe = "fusion-super-transport-belt-to-ground"}
+        {type = "unlock-recipe", recipe = "fusion-super-underground-belt"}
       },
       unit =
       {

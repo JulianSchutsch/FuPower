@@ -9,7 +9,7 @@ local function createImprovedDrillRecipe()
       subgroup = "fusion-buildings",
       enabled = "false",
       energy_required = 5,
-      ingredients = {{"basic-mining-drill", 4}, {"alien-artifact", 10}, {"productivity-module", 10}, {"steel-plate", 10}},
+      ingredients = {{"electric-mining-drill", 4}, {"alien-artifact", 10}, {"productivity-module", 10}, {"steel-plate", 10}},
       result = "fusion-minidrill"
     },
   })

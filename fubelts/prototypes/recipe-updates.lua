@@ -6,12 +6,12 @@ local function createFusionBeltRecipeUpdate()
     local recipe =
     {
       type = "recipe",
-      name = "fusion-transport-belt-to-ground-extended",
+      name = "fusion-underground-belt-extended",
       subgroup = "fusion-belts",
       enabled = "false",
       energy_required = 1,
-      ingredients = {{"express-transport-belt-to-ground-extended", 20}, {"alien-artifact", 30}, {"advanced-circuit", 60}},
-      results = {{"fusion-transport-belt-to-ground-extended", 10}}
+      ingredients = {{"express-underground-belt-extended", 20}, {"alien-artifact", 30}, {"advanced-circuit", 60}},
+      results = {{"fusion-underground-belt-extended", 10}}
     }
     data:extend({recipe})
   end
@@ -22,12 +22,12 @@ local function createFusionSuperBeltRecipeUpdate()
     local recipe =
     {
       type = "recipe",
-      name = "fusion-super-transport-belt-to-ground-extended",
+      name = "fusion-super-underground-belt-extended",
       subgroup = "fusion-belts",
       enabled = "false",
       energy_required = 1,
-      ingredients = {{"fusion-transport-belt-to-ground-extended", 20}, {"alien-artifact", 60}, {"processing-unit", 60}},
-      results = {{"fusion-super-transport-belt-to-ground-extended", 10}}
+      ingredients = {{"fusion-underground-belt-extended", 20}, {"alien-artifact", 60}, {"processing-unit", 60}},
+      results = {{"fusion-super-underground-belt-extended", 10}}
     }
     data:extend({recipe})
   end
@@ -37,34 +37,34 @@ local function createExtendedBeltRecipes()
   local recipe =
   {
     type = "recipe",
-    name = "basic-transport-belt-to-ground-extended",
+    name = "underground-belt-extended",
     subgroup = "fusion-belts",
     enabled = "false",
     energy_required = 1,
-    ingredients = {{"basic-transport-belt-to-ground", 6}},
-    results = {{"basic-transport-belt-to-ground-extended", 2}}
+    ingredients = {{"underground-belt", 6}},
+    results = {{"underground-belt-extended", 2}}
   }
   data:extend({recipe})
   local recipe =
   {
     type = "recipe",
-    name = "fast-transport-belt-to-ground-extended",
+    name = "fast-underground-belt-extended",
     subgroup = "fusion-belts",
     enabled = "false",
     energy_required = 1,
-    ingredients = {{"fast-transport-belt-to-ground", 6}},
-    results = {{"fast-transport-belt-to-ground-extended", 2}}
+    ingredients = {{"fast-underground-belt", 6}},
+    results = {{"fast-underground-belt-extended", 2}}
   }
   data:extend({recipe})
   local recipe =
   {
     type = "recipe",
-    name = "express-transport-belt-to-ground-extended",
+    name = "express-underground-belt-extended",
     subgroup = "fusion-belts",
     enabled = "false",
     energy_required = 1,
-    ingredients = {{"express-transport-belt-to-ground", 6}},
-    results = {{"express-transport-belt-to-ground-extended", 2}}
+    ingredients = {{"express-underground-belt", 6}},
+    results = {{"express-underground-belt-extended", 2}}
   }
   data:extend({recipe})
 end

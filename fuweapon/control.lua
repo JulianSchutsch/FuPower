@@ -6,7 +6,7 @@ local function sectorScanned(event)
   local radar = event.radar
   if radar.name == "fusion-area-control" then
     local position = radar.position
-    local surface = game.get_surface(1)
+    local surface = game.surfaces[1]
     local dist = 700
     spawner = surface.find_nearest_enemy{position=position, max_distance=dist}
     if spawner then
@@ -34,7 +34,7 @@ end
 -- Implements fire function fo a mobile security zone
 local function fireTank(tank)
   local position = tank.position
-  local surface = game.get_surface(1)
+  local surface = game.surfaces[1]
   local dist = 600
   local spawner = surface.find_nearest_enemy{position=position, max_distance=dist}
   if spawner then

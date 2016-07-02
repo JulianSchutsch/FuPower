@@ -2,7 +2,7 @@ require "config"
 require "fucore.lib.entity"
 
 local function createFastLongInserter()
-  local normal = findEntry(data, "inserter", "basic-inserter")
+  local normal = findEntry(data, "inserter", "inserter")
   local fast = findEntry(data, "inserter", "fast-inserter")
   local longHanded = findEntry(data, "inserter", "long-handed-inserter")
 

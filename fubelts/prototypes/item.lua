@@ -25,11 +25,11 @@ local function createFusionBeltItem()
     },
     {
       type = "item",
-      name = "fusion-transport-belt-to-ground",
+      name = "fusion-underground-belt",
       icon = "__fupower__/graphics/icons/fusion-transport-belt-to-ground.png",
       flags = {"goes-to-quickbar"},
       subgroup = "fusion-buildings",
-      place_result = "fusion-transport-belt-to-ground",
+      place_result = "fusion-underground-belt",
       order = "k",
       stack_size = 50
     },
@@ -61,11 +61,11 @@ local function createFusionSuperBeltItem()
     },
     {
       type = "item",
-      name = "fusion-super-transport-belt-to-ground",
+      name = "fusion-super-underground-belt",
       icon = "__fupower__/graphics/icons/fusion-super-transport-belt-to-ground.png",
       flags = {"goes-to-quickbar"},
       subgroup = "fusion-buildings",
-      place_result = "fusion-super-transport-belt-to-ground",
+      place_result = "fusion-super-underground-belt",
       order = "g",
       stack_size = 50
     },

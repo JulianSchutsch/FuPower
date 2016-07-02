@@ -4,9 +4,9 @@ require "fucore.lib.entity"
 
 local function createFusionBelts()
   local function patchFilenames(belt)
-    local ignorePattern = {ending_patch=0, working_sound=0}
+    local ignorePattern = {structure=0, ending_patch=0, working_sound=0, connector_frame_sprites=0, circuit_connector_sprites=0, circuit_wire_connection_point=0, circuit_wire_max_disance=0}
     gsubEntities(belt, "filename", "__base__", "__fupower__", ignorePattern)
-    gsubEntities(belt, "filename", "express%-transport%-belt%-to%-ground-extended", "fusion-transport-belt-to-ground", ignorePattern)
+    gsubEntities(belt, "filename", "express%-underground%-belt%-extended", "fusion-underground-belt", ignorePattern)
     gsubEntities(belt, "filename", "express%-transport%-belt", "fusion-transport-belt", ignorePattern)
     gsubEntities(belt, "filename", "express%-splitter", "fusion-splitter", ignorePattern)
     gsubEntities(belt, "filename", "express%-tunnel", "fusion-tunnel", ignorePattern)
@@ -25,16 +25,16 @@ local function createFusionBelts()
   fusionSplitter.minable.result = fusionSplitter.name
   data:extend({fusionSplitter})
 
-  local fusionTunnel = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground"))
-  fusionTunnel.name    = "fusion-transport-belt-to-ground"
+  local fusionTunnel = clone(findEntry(data, "underground-belt", "express-underground-belt"))
+  fusionTunnel.name    = "fusion-underground-belt"
   fusionTunnel.speed   = 2*fusionTunnel.speed
   patchFilenames(fusionTunnel)
   fusionTunnel.minable.result = fusionTunnel.name
   data:extend({fusionTunnel})
 
   if config.fubelts.extendedBelts==true then
-    local fusionLongBelt = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground-extended"))
-    fusionLongBelt.name  = "fusion-transport-belt-to-ground-extended"
+    local fusionLongBelt = clone(findEntry(data, "underground-belt", "express-underground-belt-extended"))
+    fusionLongBelt.name  = "fusion-underground-belt-extended"
     fusionLongBelt.speed = 2*fusionLongBelt.speed
     patchFilenames(fusionLongBelt)
     fusionLongBelt.minable.result = fusionLongBelt.name
@@ -61,16 +61,16 @@ local function createFusionSuperBelts()
   superFusionSplitter.minable.result = superFusionSplitter.name
   data:extend({superFusionSplitter})
 
-  local superFusionTunnel = clone(findEntry(data, "transport-belt-to-ground", "fusion-transport-belt-to-ground"))
-  superFusionTunnel.name = "fusion-super-transport-belt-to-ground"
+  local superFusionTunnel = clone(findEntry(data, "underground-belt", "fusion-underground-belt"))
+  superFusionTunnel.name = "fusion-super-underground-belt"
   superFusionTunnel.speed = 2*superFusionTunnel.speed
   patchSuperFilenames(superFusionTunnel)
   superFusionTunnel.minable.result = superFusionTunnel.name
   data:extend({superFusionTunnel})
 
   if config.fubelts.extendedBelts==true then  
-    local superFusionLongBelt = clone(findEntry(data, "transport-belt-to-ground", "fusion-transport-belt-to-ground-extended"))
-    superFusionLongBelt.name = "fusion-super-transport-belt-to-ground-extended"
+    local superFusionLongBelt = clone(findEntry(data, "underground-belt", "fusion-underground-belt-extended"))
+    superFusionLongBelt.name = "fusion-super-underground-belt-extended"
     superFusionLongBelt.speed = 2*superFusionLongBelt.speed
     patchSuperFilenames(superFusionLongBelt)
     superFusionLongBelt.minable.result = superFusionLongBelt.name
@@ -79,20 +79,20 @@ local function createFusionSuperBelts()
 end
 
 local function createExtendedBelts()
-  local extendedBelt = clone(findEntry(data, "transport-belt-to-ground", "basic-transport-belt-to-ground"))
-  extendedBelt.name = "basic-transport-belt-to-ground-extended"
+  local extendedBelt = clone(findEntry(data, "underground-belt", "underground-belt"))
+  extendedBelt.name = "underground-belt-extended"
   extendedBelt.max_distance = 30
   extendedBelt.minable.result = extendedBelt.name
   data:extend({extendedBelt})
   
-  local fastExtendedBelt = clone(findEntry(data, "transport-belt-to-ground", "fast-transport-belt-to-ground"))
-  fastExtendedBelt.name = "fast-transport-belt-to-ground-extended"
+  local fastExtendedBelt = clone(findEntry(data, "underground-belt", "fast-underground-belt"))
+  fastExtendedBelt.name = "fast-underground-belt-extended"
   fastExtendedBelt.max_distance = 30
   fastExtendedBelt.minable.result = fastExtendedBelt.name
   data:extend({fastExtendedBelt})
   
-  local expressExtendedBelt = clone(findEntry(data, "transport-belt-to-ground", "express-transport-belt-to-ground"))
-  expressExtendedBelt.name = "express-transport-belt-to-ground-extended"
+  local expressExtendedBelt = clone(findEntry(data, "underground-belt", "express-underground-belt"))
+  expressExtendedBelt.name = "express-underground-belt-extended"
   expressExtendedBelt.max_distance = 30
   expressExtendedBelt.minable.result = expressExtendedBelt.name
   data:extend({expressExtendedBelt})

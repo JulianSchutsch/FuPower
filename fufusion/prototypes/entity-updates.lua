@@ -2,7 +2,7 @@ require "config"
 require "fucore.lib.entity"
 
 local function createFusion()
-  local ignoreFilter = {fluid_box=0, fluid_boxes=0}
+  local ignoreFilter = {fluid_box=0, fluid_boxes=0, fire=0}
   do
     local boiler = clone(findEntry(data, "boiler", "boiler"))
     boiler.name = "fusion-boiler"
@@ -37,7 +37,7 @@ local function createFusion()
 end
 
 local function createAdvancedFusion()
-  local ignoreFilter = {fluid_box=0, fluid_boxes=0}
+  local ignoreFilter = {fluid_box=0, fluid_boxes=0, fire=0}
   do
     local advancedBoiler = clone(findEntry(data, "boiler", "fusion-boiler"))
     advancedBoiler.name = "fusion-advanced-boiler"

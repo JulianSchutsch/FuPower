@@ -1,6 +1,5 @@
 -- Event handling for a mod, which may have more than one indenpendent event handler.
 -- Straightforward extension to the script event interface
-require "defines"
 
 local function handle_on_built_entity(event)
   for k, v in pairs(list_on_built_entity) do

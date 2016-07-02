@@ -12,9 +12,10 @@ local function createFusionTrain()
     alienLocomotive.minable.result = alienLocomotive.name
     alienLocomotive.energy_per_hit_point = 25
     alienLocomotive.energy_source.fuel_inventory_size = 1
-    alienLocomotive.energy_source.emissions = 0
-    gsubFilter(alienLocomotive, ".png", "__base__", "__fupower__")
-    gsubFilter(alienLocomotive, ".png", "diesel%-locomotive", "fusion-locomotive")
+    alienLocomotive.energy_source.emissions = 0    
+    images = alienLocomotive.pictures.layers[1]
+    gsubFilter(images, ".png", "__base__", "__fupower__")
+    gsubFilter(images, ".png", "diesel%-locomotive", "fusion-locomotive")
     data:extend({alienLocomotive})
   end
 
@@ -27,8 +28,9 @@ local function createFusionTrain()
     alienWagon.air_resistance = 0.5*alienWagon.air_resistance
     alienWagon.minable.result = alienWagon.name
     alienWagon.energy_per_hit_point = 25
-    gsubFilter(alienWagon, ".png", "__base__", "__fupower__")
-    gsubFilter(alienWagon, ".png", "cargo%-wagon", "fusion-wagon")
+    images = alienWagon.pictures.layers[1]
+    gsubFilter(images, ".png", "__base__", "__fupower__")
+    gsubFilter(images, ".png", "cargo%-wagon", "fusion-wagon")
     data:extend({alienWagon})
   end
 end

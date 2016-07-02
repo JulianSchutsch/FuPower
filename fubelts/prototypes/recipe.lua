@@ -23,12 +23,12 @@ local function createFusionBeltRecipe()
     },
     {
       type = "recipe",
-      name = "fusion-transport-belt-to-ground",
+      name = "fusion-underground-belt",
       subgroup = "fusion-belts",
       enabled = "false",
       energy_required = 1,
-      ingredients = {{"express-transport-belt-to-ground", 20}, {"alien-artifact", 5}, {"advanced-circuit", 40}},
-      results = {{"fusion-transport-belt-to-ground", 10}}
+      ingredients = {{"express-underground-belt", 20}, {"alien-artifact", 5}, {"advanced-circuit", 40}},
+      results = {{"fusion-underground-belt", 10}}
     },
   })
 end
@@ -56,12 +56,12 @@ local function createFusionSuperBeltRecipe()
     },
     {
       type = "recipe",
-      name = "fusion-super-transport-belt-to-ground",
+      name = "fusion-super-underground-belt",
       subgroup = "fusion-belts",
       enabled = "false",
       energy_required = 1,
-      ingredients = {{"fusion-transport-belt-to-ground", 20}, {"alien-artifact", 40}, {"processing-unit", 40}},
-      results = {{"fusion-super-transport-belt-to-ground", 10}}
+      ingredients = {{"fusion-underground-belt", 20}, {"alien-artifact", 40}, {"processing-unit", 40}},
+      results = {{"fusion-super-underground-belt", 10}}
     },
   })
 end
